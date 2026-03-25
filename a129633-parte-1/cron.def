@@ -1,0 +1,21 @@
+##################################################################################
+## ISCTE-IUL: Trabalho prático de Sistemas Operativos 2024/2025, Enunciado Versão 1
+##
+## Aluno: Nº 129633       Nome: Rodrigo Vicente Seixas Robalo
+## Nome do Módulo: S2.3 cron.def
+## Descrição/Explicação do Módulo:
+## Este ficheiro configura o sistema para correr automaticamente o script manutencao.sh 
+## de segunda a sexta-feira, incluindo feriados, às 05h59 e às 13h01, através do serviço cron do Linux. 
+## 
+## Explicação de quais os comandos a usar para configurar o seu sistema Linux usando este ficheiro:
+## Este ficheiro define a configuração do cron com a ordem: minutos, horas, dia do mês, comando 
+## e caminho para o manutencao.sh. O cron utiliza esta configuração para correr o script nos horários 
+## indicados, mas este também pode ser executado manualmente a qualquer momento.
+## Como o dia e o mês não são relevantes, optei por meter "*"
+## Para ativar esta configuração no crontab do utilizador: crontab cron.def
+## Para verificar as tarefas agendadas: crontab -l
+## Para apagar todas as tarefas do crontab: crontab -r
+##################################################################################
+
+59 5 * * 1-5 cd /trabalho-2024-2025/parte-1/manutencao.sh
+1 13 * * 1-5 cd /trabalho-2024-2025/parte-1/manutencao.sh
